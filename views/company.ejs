@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>company</title>
+  </head>
+  <body>
+    <% if (company) { %>
+      <h1>company data</h1>
+      <p><%= company.ticker %></p>
+      <p><%= company.business_phone_no %></p>
+      <p><%= company.business_address %></p>
+
+      <p><%= company.short_description %></p>
+
+      <p><%= data.tag %> - <%= data.response %></p>
+      <p><%= data.time %></p>
+    <% } else { %>
+
+      <h1>No Query</h1>
+
+    <% } %>
+
+
+    <a href="/"> Go Home</a>
+    <a href="/index"> Go to the index </a>
+  </body>
+</html>

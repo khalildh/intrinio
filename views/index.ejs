@@ -1,0 +1,42 @@
+<h1>Index</h1>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+
+<table style="width:500px">
+  <tr>
+    <th>TICKER</th>
+    <th>TAG</th>
+    <th>VALUE</th>
+    <th>TIME</th>
+  </tr>
+
+
+  <% item.recordsets[0].forEach(function(row){ %>
+    <tr>
+      <td><%= row.ticker %></td>
+      <td><%= row.tag %></td>
+      <td><%= row.response %></td>
+      <td><%= row.time %></td>
+    </tr>
+  <% }); %>
+
+</table>
+
+<a href="/"> Go Home</a>
