@@ -5,9 +5,12 @@ app.set("view engine", "ejs");
 
 const sql = require('mssql');
 
+const password = process.argv[2];
+console.log(password);
+
 const config = {
   user: 'SA',
-  password: 'Apathy95',
+  password: password,
   server: 'localhost',
   database: 'IntrinioDB'
 };
